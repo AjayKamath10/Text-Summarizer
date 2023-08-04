@@ -85,7 +85,7 @@ def normal_text(article):
 
 def query(payload):
     API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
-    headers = {"Authorization": "Bearer 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"}
+    headers = ''#<ENTER API KEY>
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()
 
@@ -102,15 +102,12 @@ def img_to_sum(image):
 
 #image summary
 def image_summary(img):
-    #img = r"C:\Users\kamat\Downloads\tomato_handwriting.png"
+    #img = r"\tomato_handwriting.png"
     numOfWords, summary = img_to_sum(img)
     #print("Image summarized: ", summary)
     return numOfWords, summary
 
-#image_summary(r"C:\Users\kamat\Downloads\tomato_handwriting.png")
 
-
-    
 
     
     
